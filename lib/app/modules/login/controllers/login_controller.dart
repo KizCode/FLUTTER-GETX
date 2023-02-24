@@ -10,9 +10,8 @@ import '../../../utils/api.dart';
 import '../../dashboard/views/dashboard_view.dart';
 
 class LoginController extends GetxController {
+  //TODO: Implement LoginController
 
-    //TODO: Implement LoginController
-  
   final _getConnect = GetConnect();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -50,6 +49,7 @@ class LoginController extends GetxController {
         jsonDecode(utf8.decode(response.bodyBytes)) as Map<String, dynamic>;
     if (decodedResponse['success'] == true) {
       authToken.write('token', decodedResponse['access_token']);
+      authToken.write('full_name', response.body['full_name']);
       Get.offAllNamed('/home');
     } else {
       Get.snackbar('Error', decodedResponse['message'],
@@ -57,7 +57,8 @@ class LoginController extends GetxController {
           backgroundColor: Colors.red,
           colorText: Colors.white,
           forwardAnimationCurve: Curves.bounceIn,
-          margin: const EdgeInsets.only(top: 10, left: 5, right:5));
+          margin: const EdgeInsets.only(top: 10, left: 5, right: 5));
     }
   }
+
 }
