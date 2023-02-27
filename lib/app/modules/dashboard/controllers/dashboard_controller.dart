@@ -20,7 +20,7 @@ class DashboardController extends GetxController {
     return HeadlineResponse.fromJson(jsonDecode(response.body));
   }
 
-   Future<EntertainmentResponse> getEntertainmment() async {
+  Future<EntertainmentResponse> getEntertainmment() async {
     //memanggil fungsi getConnect untuk melakukan request ke BaseUrl.headline
     final response = await _getConnect.get(BaseUrl.entertainment);
     //mengembalikan data response dalam bentuk HeadlineResponse setelah di-decode dari JSON
@@ -34,7 +34,7 @@ class DashboardController extends GetxController {
     return SportsResponse.fromJson(jsonDecode(response.body));
   }
 
-   Future<TechnologyResponse> getTechnology() async {
+  Future<TechnologyResponse> getTechnology() async {
     //memanggil fungsi getConnect untuk melakukan request ke BaseUrl.headline
     final response = await _getConnect.get(BaseUrl.technology);
     //mengembalikan data response dalam bentuk HeadlineResponse setelah di-decode dari JSON

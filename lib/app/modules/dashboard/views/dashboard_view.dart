@@ -7,7 +7,6 @@ import 'package:laporan/app/data/sports_response.dart';
 import 'package:laporan/app/data/technology_response.dart';
 import 'package:lottie/lottie.dart';
 import '../../../data/headline_response.dart';
-import '../../../data/technology_response.dart';
 import '../../home/views/home_view.dart';
 import '../controllers/dashboard_controller.dart';
 
@@ -19,7 +18,7 @@ class DashboardView extends GetView<DashboardController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () async {
@@ -64,6 +63,7 @@ class DashboardView extends GetView<DashboardController> {
                       Tab(text: "Teknologi"),
                       Tab(text: "Olahraga"),
                       Tab(text: "Hiburan"),
+                      Tab(text: "Tentang Saya"),
                     ],
                   ),
                 ),
@@ -76,6 +76,7 @@ class DashboardView extends GetView<DashboardController> {
               technology(controller, scrollController),
               sports(controller, scrollController),
               entertainment(controller, scrollController),
+              aboutme()
             ],
           ),
         ),
@@ -433,6 +434,30 @@ class DashboardView extends GetView<DashboardController> {
           },
         );
       },
+    );
+  }
+
+  Center aboutme() {
+    return Center(
+      child: Container(
+        padding: EdgeInsets.symmetric(vertical: 15.0),
+        child: Column(
+          children: [
+            Container(
+              child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(
+                      'https://scontent.fbdo9-1.fna.fbcdn.net/v/t1.6435-9/124518295_811614009673377_220339094950271628_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEPZe-1Qz_6SYdwIfh1uGiGMCfxnTCuhrgwJ_GdMK6GuHZUMYgA6k5ojsqWYFGZm20N0SxpEKDqut2yHvP5BbkT&_nc_ohc=VHpnHOpoq4IAX9MtRZg&_nc_ht=scontent.fbdo9-1.fna&oh=00_AfDZopIygpwefx-M47k52A5pCkToO9nlM9_Hso7bOF8F2A&oe=642459BB')),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5),
+              child: Center(
+                child: Text('Halo Saya Berli'),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
