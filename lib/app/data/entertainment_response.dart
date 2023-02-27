@@ -28,8 +28,7 @@ class EntertainmentResponse {
 }
 
 class Data {
-
-    String? name;
+  String? name;
   String? author;
   String? title;
   String? description;
