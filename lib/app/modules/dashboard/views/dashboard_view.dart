@@ -63,7 +63,7 @@ class DashboardView extends GetView<DashboardController> {
                       Tab(text: "Teknologi"),
                       Tab(text: "Olahraga"),
                       Tab(text: "Hiburan"),
-                      Tab(text: "Tentang Saya"),
+                      Tab(text: "Profil"),
                     ],
                   ),
                 ),
@@ -450,10 +450,47 @@ class DashboardView extends GetView<DashboardController> {
                       'https://scontent.fbdo9-1.fna.fbcdn.net/v/t1.6435-9/124518295_811614009673377_220339094950271628_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEPZe-1Qz_6SYdwIfh1uGiGMCfxnTCuhrgwJ_GdMK6GuHZUMYgA6k5ojsqWYFGZm20N0SxpEKDqut2yHvP5BbkT&_nc_ohc=VHpnHOpoq4IAX9MtRZg&_nc_ht=scontent.fbdo9-1.fna&oh=00_AfDZopIygpwefx-M47k52A5pCkToO9nlM9_Hso7bOF8F2A&oe=642459BB')),
             ),
             Container(
-              margin: EdgeInsets.only(top: 5),
-              child: Center(
-                child: Text('Halo Saya Berli'),
+              margin: EdgeInsets.only(top: 10),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: NetworkImage(
+                            'https://img.icons8.com/fluency/256/facebook-new.png'),
+                        fit: BoxFit.cover,
+                        height: 50,
+                        width: 50,
+                      ),
+                      Image(  
+                        image: NetworkImage(
+                            'https://img.icons8.com/fluency/256/github.png'),
+                        fit: BoxFit.cover,
+                        height: 50,
+                        width: 50,
+                      ),
+                      IconButton(   
+                        padding: EdgeInsets.all(0.0),
+                        onPressed: () => {},
+                        icon: Image.network(
+                            'https://img.icons8.com/fluency/256/instagram-new.png', fit: BoxFit.cover,),
+                        iconSize: 50,
+                      )
+                    ],
+                  ),
+                ],
               ),
+            ),
+            Container(
+              padding:
+                  EdgeInsets.only(top: 10, right: 30, left: 30, bottom: 10),
+              margin: EdgeInsets.only(left: 5, right: 5),
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                Text(
+                    'Halo Saya Berli, Saya Anak Tunggal ndsahbbjksnnkasnanjanjsadbjksadkjsadjksadnasm svjknjnjadsjsajkasjkjksabfbjnfdjfsfjksfdjksfksfjsfknsdfks'),
+              ]),
             )
           ],
         ),
