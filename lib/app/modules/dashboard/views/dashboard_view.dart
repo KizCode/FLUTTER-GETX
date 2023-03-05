@@ -456,19 +456,21 @@ class DashboardView extends GetView<DashboardController> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(
-                        image: NetworkImage(
-                            'https://img.icons8.com/fluency/256/facebook-new.png'),
-                        fit: BoxFit.cover,
-                        height: 50,
-                        width: 50,
+                      IconButton(
+                        padding: EdgeInsets.all(0.0),
+                        onPressed: () => {},
+                        icon: Image.network(
+                          'https://img.icons8.com/fluency/256/facebook-new.png',
+                          fit: BoxFit.cover,
+                        ),
+                        iconSize: 50,
                       ),
-                      Image(  
-                        image: NetworkImage(
-                            'https://img.icons8.com/fluency/256/github.png'),
-                        fit: BoxFit.cover,
-                        height: 50,
-                        width: 50,
+                      IconButton(   
+                        padding: EdgeInsets.all(0.0),
+                        onPressed: () => {},
+                        icon: Image.network(
+                            'https://img.icons8.com/fluency/256/github.png', fit: BoxFit.cover,),
+                        iconSize: 50,
                       ),
                       IconButton(   
                         padding: EdgeInsets.all(0.0),
@@ -489,7 +491,7 @@ class DashboardView extends GetView<DashboardController> {
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.start, children: [
                 Text(
-                    'Halo Saya Berli, Saya Anak Tunggal ndsahbbjksnnkasnanjanjsadbjksadkjsadjksadnasm svjknjnjadsjsajkasjkjksabfbjnfdjfsfjksfdjksfksfjsfknsdfks'),
+                    'Halo Saya Berli, Saya seorang pelajar yang sedang belajar Programing di sekolah saya'),
               ]),
             )
           ],
